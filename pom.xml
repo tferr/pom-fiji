@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>net.imagej</groupId>
 		<artifactId>pom-imagej</artifactId>
-		<version>15.6.0</version>
+		<version>16.4.1</version>
 		<relativePath />
 	</parent>
 
 	<groupId>sc.fiji</groupId>
 	<artifactId>pom-fiji</artifactId>
-	<version>23.0.1-SNAPSHOT</version>
+	<version>26.1.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Fiji Projects</name>
@@ -39,19 +39,6 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 			<url>http://imagej.net/User:Rueden</url>
 			<roles>
 				<role>founder</role>
-				<role>lead</role>
-				<role>developer</role>
-				<role>debugger</role>
-				<role>reviewer</role>
-				<role>support</role>
-				<role>maintainer</role>
-			</roles>
-		</developer>
-		<developer>
-			<id>hinerm</id>
-			<name>Mark Hiner</name>
-			<url>http://imagej.net/User:Hinerm</url>
-			<roles>
 				<role>lead</role>
 				<role>developer</role>
 				<role>debugger</role>
@@ -88,6 +75,11 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 			<properties><id>stelfrich</id></properties>
 		</contributor>
 		<contributor>
+			<name>Mark Hiner</name>
+			<url>http://imagej.net/User:Hinerm</url>
+			<properties><id>hinerm</id></properties>
+		</contributor>
+		<contributor>
 			<name>Tobias Pietzsch</name>
 			<url>http://imagej.net/User:Pietzsch</url>
 			<properties><id>tpietzsch</id></properties>
@@ -120,6 +112,10 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 	</ciManagement>
 
 	<properties>
+		<license.licenseName>gpl_v3</license.licenseName>
+		<license.copyrightAuthors>${fiji.authors}</license.copyrightAuthors>
+		<license.projectName>Fiji distribution of ImageJ for the life sciences.</license.projectName>
+
 		<!--
 		If two artifacts on the classpath use two different versions of the
 		same dependency, behavior is inconsistent at best, and often broken.
@@ -141,7 +137,7 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 		<!-- Fiji sub-BOMs -->
 
 		<!-- pom-bigdataviewer - https://github.com/bigdataviewer/pom-bigdataviewer -->
-		<pom-bigdataviewer.version>3.2.0</pom-bigdataviewer.version>
+		<pom-bigdataviewer.version>3.3.0</pom-bigdataviewer.version>
 
 		<!-- pom-trakem2 - https://github.com/trakem2/TrakEM2 -->
 		<pom-trakem2.version>2.0.0</pom-trakem2.version>
@@ -149,22 +145,21 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 		<!-- Standard Fiji projects -->
 
 		<AnalyzeSkeleton.version>3.1.0</AnalyzeSkeleton.version>
-		<Analyze_Reader_Writer.version>2.0.0</Analyze_Reader_Writer.version>
 		<Anisotropic_Diffusion_2D.version>2.0.0</Anisotropic_Diffusion_2D.version>
 		<Archipelago_Plugins.version>0.5.2</Archipelago_Plugins.version>
 		<Arrow.version>2.0.1</Arrow.version>
-		<Auto_Threshold.version>1.16.2</Auto_Threshold.version>
+		<Auto_Threshold.version>1.16.4</Auto_Threshold.version>
 		<BalloonSegmentation.version>2.0.0</BalloonSegmentation.version>
-		<Bug_Submitter.version>2.0.2</Bug_Submitter.version>
+		<Bug_Submitter.version>2.1.0</Bug_Submitter.version>
 		<CPU_Meter.version>2.0.0</CPU_Meter.version>
 		<Calculator_Plus.version>2.0.0</Calculator_Plus.version>
-		<Cell_Counter.version>2.2.0</Cell_Counter.version>
-		<Colocalisation_Analysis.version>2.2.0</Colocalisation_Analysis.version>
+		<Cell_Counter.version>2.2.1</Cell_Counter.version>
+		<Colocalisation_Analysis.version>2.2.1</Colocalisation_Analysis.version>
 		<Color_Histogram.version>2.0.6</Color_Histogram.version>
 		<Color_Inspector_3D.version>2.3.1</Color_Inspector_3D.version>
 		<Colour_Deconvolution.version>3.0.1</Colour_Deconvolution.version>
 		<CorrectBleach.version>2.0.1</CorrectBleach.version>
-		<Descriptor_based_registration.version>2.0.12</Descriptor_based_registration.version>
+		<Descriptor_based_registration.version>2.1.0</Descriptor_based_registration.version>
 		<Dichromacy.version>2.1.0</Dichromacy.version>
 		<Differentials.version>2.0.0</Differentials.version>
 		<Directionality.version>2.0.1</Directionality.version>
@@ -173,30 +168,30 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 		<Feature_Detection.version>2.0.1</Feature_Detection.version>
 		<Fiji_3D_Blob_Segmentation.version>3.0.0</Fiji_3D_Blob_Segmentation.version>
 		<Fiji_Archipelago.version>2.0.0</Fiji_Archipelago.version>
-		<Fiji_Developer.version>2.0.4</Fiji_Developer.version>
+		<Fiji_Developer.version>2.0.5</Fiji_Developer.version>
 		<Fiji_Package_Maker.version>2.1.0</Fiji_Package_Maker.version>
 		<Fiji_Plugins.version>3.0.0</Fiji_Plugins.version>
 		<Fiji_Updater.version>2.0.0</Fiji_Updater.version>
-		<FlowJ.version>1.29.1</FlowJ.version>
+		<FlowJ.version>1.29.2</FlowJ.version>
 		<Graph_Cut.version>1.0.1</Graph_Cut.version>
 		<Gray_Morphology.version>2.3.3</Gray_Morphology.version>
 		<H5J_Loader_Plugin.version>1.0.4</H5J_Loader_Plugin.version>
 		<Helmholtz_Analysis.version>2.0.1</Helmholtz_Analysis.version>
 		<IJ_Robot.version>2.0.0</IJ_Robot.version>
-		<IO.version>2.3.1</IO.version>
+		<IO.version>3.0.1</IO.version>
 		<ImageJ_3D_Objects_Counter.version>2.0.0</ImageJ_3D_Objects_Counter.version>
 		<ImageJ_3D_Viewer.version>4.0.1</ImageJ_3D_Viewer.version>
-		<Image_5D.version>1.2.6</Image_5D.version>
+		<Image_5D.version>2.0.1</Image_5D.version>
 		<Image_Expression_Parser.version>3.0.0</Image_Expression_Parser.version>
 		<Interactive_3D_Surface_Plot.version>2.4.1</Interactive_3D_Surface_Plot.version>
 		<IsoData_Classifier.version>2.0.0</IsoData_Classifier.version>
 		<Kuwahara_Filter.version>2.0.0</Kuwahara_Filter.version>
-		<KymographBuilder.version>1.2.2</KymographBuilder.version>
+		<KymographBuilder.version>1.2.3</KymographBuilder.version>
 		<LSM_Reader.version>4.1.1</LSM_Reader.version>
 		<LSM_Toolbox.version>4.1.1</LSM_Toolbox.version>
 		<Lasso_and_Blow_Tool.version>2.0.1</Lasso_and_Blow_Tool.version>
 		<Linear_Kuwahara.version>2.0.0</Linear_Kuwahara.version>
-		<LocalThickness.version>4.0.0</LocalThickness.version>
+		<LocalThickness.version>4.0.1</LocalThickness.version>
 		<MTrack2.version>2.0.0</MTrack2.version>
 		<M_I_P.version>2.0.0</M_I_P.version>
 		<Manual_Tracking.version>2.1.0</Manual_Tracking.version>
@@ -208,33 +203,33 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 		<RATS.version>2.0.0</RATS.version>
 		<Reconstruct_Reader.version>2.0.2</Reconstruct_Reader.version>
 		<SPIM_Opener.version>2.0.1</SPIM_Opener.version>
-		<SPIM_Registration.version>4.0.0</SPIM_Registration.version>
+		<SPIM_Registration.version>5.0.7</SPIM_Registration.version>
 		<Samples.version>2.0.1</Samples.version>
 		<Script_Launcher.version>0.1.0</Script_Launcher.version>
 		<Series_Labeler.version>2.0.0</Series_Labeler.version>
 		<SheppLogan.version>2.0.0</SheppLogan.version>
-		<Simple_Neurite_Tracer.version>3.0.2</Simple_Neurite_Tracer.version>
+		<Simple_Neurite_Tracer.version>3.0.3</Simple_Neurite_Tracer.version>
 		<Siox_Segmentation.version>1.0.4</Siox_Segmentation.version>
-		<Skeletonize3D.version>2.0.0</Skeletonize3D.version>
+		<Skeletonize3D.version>2.1.0</Skeletonize3D.version>
 		<Snakuscule.version>2.0.0</Snakuscule.version>
 		<SplineDeformationGenerator.version>2.0.0</SplineDeformationGenerator.version>
 		<StackReg.version>2.0.0</StackReg.version>
 		<Stack_Manipulation.version>2.0.1</Stack_Manipulation.version>
 		<Statistical_Region_Merging.version>2.0.0</Statistical_Region_Merging.version>
-		<Stitching.version>3.1.0</Stitching.version>
+		<Stitching.version>3.1.1</Stitching.version>
 		<Sync_Win.version>1.7-fiji3</Sync_Win.version>
 		<Thread_Killer.version>2.0.0</Thread_Killer.version>
 		<Time_Lapse.version>2.0.1</Time_Lapse.version>
 		<Time_Stamper.version>2.0.0</Time_Stamper.version>
 		<ToAST.version>25.0.1</ToAST.version>
 		<TopoJ.version>2.0.0</TopoJ.version>
-		<TrackMate.version>3.2.1</TrackMate.version>
-		<Trainable_Segmentation.version>3.1.0</Trainable_Segmentation.version>
+		<TrackMate.version>3.4.2</TrackMate.version>
+		<Trainable_Segmentation.version>3.1.2</Trainable_Segmentation.version>
 		<TrakEM2_Archipelago.version>2.0.1</TrakEM2_Archipelago.version>
 		<TurboReg.version>2.0.0</TurboReg.version>
 		<UnwarpJ.version>2.0.0</UnwarpJ.version>
 		<VIB-lib.version>2.1.1</VIB-lib.version>
-		<VIB.version>3.0.0</VIB.version>
+		<VIB.version>3.0.1</VIB.version>
 		<Vaa3d_Reader.version>2.0.1</Vaa3d_Reader.version>
 		<Vaa3d_Writer.version>1.0.1</Vaa3d_Writer.version>
 		<Video_Editing.version>2.0.0</Video_Editing.version>
@@ -261,7 +256,7 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 		<!-- External Fiji projects -->
 
 		<!-- Sholl Analysis - https://github.com/tferr/ASA -->
-		<Sholl_Analysis.version>3.6.2</Sholl_Analysis.version>
+		<Sholl_Analysis.version>3.6.5</Sholl_Analysis.version>
 
 		<!-- JITK TPS - https://github.com/saalfeldlab/jitk-tps -->
 		<jitk-tps.version>2.1.0</jitk-tps.version>
@@ -271,6 +266,9 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 
 		<!-- TrakEM2 TPS - https://github.com/saalfeldlab/trakem2-tps -->
 		<trakem2_tps.version>1.1.2</trakem2_tps.version>
+
+		<!-- Z-Spacing correction https://github.com/saalfeldlab/z-spacing -->
+		<z_spacing.version>1.0.2</z_spacing.version>
 
 		<!-- Third party projects -->
 
@@ -316,11 +314,6 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 				<groupId>sc.fiji</groupId>
 				<artifactId>AnalyzeSkeleton_</artifactId>
 				<version>${AnalyzeSkeleton.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>sc.fiji</groupId>
-				<artifactId>Analyze_Reader_Writer</artifactId>
-				<version>${Analyze_Reader_Writer.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>sc.fiji</groupId>
@@ -863,6 +856,13 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 				<version>${trakem2_tps.version}</version>
 			</dependency>
 
+			<!-- Z-Spacing correction https://github.com/saalfeldlab/z-spacing -->
+			<dependency>
+				<groupId>sc.fiji</groupId>
+				<artifactId>z_spacing</artifactId>
+				<version>${z_spacing.version}</version>
+			</dependency>
+
 			<!-- TrakEM2-based projects -->
 
 			<!-- FS Align TrakEM2 - https://github.com/trakem2/FS_Align_TrakEM2 -->
@@ -1029,15 +1029,6 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>license-maven-plugin</artifactId>
-				<configuration>
-					<licenseName>gpl_v3</licenseName>
-					<organizationName>${fiji.authors}</organizationName>
-					<projectName>Fiji distribution of ImageJ for the life sciences.</projectName>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
@@ -1078,7 +1069,6 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 
 				<!-- Standard Fiji projects -->
 				<AnalyzeSkeleton.version>LATEST</AnalyzeSkeleton.version>
-				<Analyze_Reader_Writer.version>LATEST</Analyze_Reader_Writer.version>
 				<Anisotropic_Diffusion_2D.version>LATEST</Anisotropic_Diffusion_2D.version>
 				<Archipelago_Plugins.version>LATEST</Archipelago_Plugins.version>
 				<Arrow.version>LATEST</Arrow.version>
@@ -1192,6 +1182,7 @@ Projects wishing to use pom-fiji as a parent project need to override the &lt;na
 				<jitk-tps.version>LATEST</jitk-tps.version>
 				<bigwarp.version>LATEST</bigwarp.version>
 				<trakem2_tps.version>LATEST</trakem2_tps.version>
+				<z_spacing.version>LATEST</z_spacing.version>
 			</properties>
 			<repositories>
 				<repository>
